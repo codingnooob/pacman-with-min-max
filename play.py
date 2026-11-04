@@ -38,7 +38,11 @@ class play:
             self.game.score -= 1
 
             poses = self.ghosts.move_ghosts(
-                pos_g1, pos_g2, self.game.get_board(), self.game.get_size()
+                pos_g1,
+                pos_g2,
+                self.game.get_board(),
+                self.game.get_size(),
+                pacman_pos=self.game.get_pos_pacman(),
             )
 
             self.game.set_pos_ghost(1, poses["ghosts1"])
